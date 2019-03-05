@@ -155,13 +155,13 @@
     "build": "npm run prod:client",
     "prod:client": "NODE_ENV=production webpack --bail --colors --display-error-details --config tools/webpack.config.js",
     "webpack": "webpack",
-    "watch": "onchange \"**/*.js\" -e \"bin\" -e \"client/thirdparty-js\" -e \"node_modules\" -e \"public\" -f add -f change -- eslint --fix \"{{changed}}\"",
-    "postinstall": "npm run build"
+    "watch": "onchange \"**/*.js\" -e \"bin\" -e \"client/thirdparty-js\" -e \"node_modules\" -e \"public\" -f add -f change -- eslint --fix \"{{changed}}\""
   },
   "env": {
     "NODE_ENV": "production"
   },
   "bugs": {
     "url": "https://github.com/crowi/crowi/issues"
-  }
+  },
+  "heroku-run-build-script": true
 }
